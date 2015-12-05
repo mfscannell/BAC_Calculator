@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/beerpint"
+    android:id="@+id/main_layout" >
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_margin="0dp"
+	    android:weightSum="4">
+	    <ImageButton 
+	        android:adjustViewBounds = "true"
+	        android:id="@+id/button_edit_personal"
+	        android:layout_width="0dp"
+	        android:layout_height="60dp"
+	        android:layout_weight="1"
+	        android:layout_margin="-1dp"
+	        android:onClick="editPersonalInfo"
+	         android:scaleType="fitCenter"
+	        android:background="@null"
+	        android:src="@drawable/socialperson"/>
+	    <ImageButton 
+	        android:adjustViewBounds = "true"
+	        android:id="@+id/button_add_drink"
+	        android:layout_width="0dp"
+	        android:layout_height="60dp"
+	        android:layout_weight="1"
+	        android:layout_margin="-1dp"
+	        android:scaleType="fitCenter"
+	        android:background="@null"
+	        android:src="@drawable/cocktail"
+	        android:onClick="addDrink"/>
+	    <ImageButton
+	        android:adjustViewBounds = "true"
+	        android:id="@+id/button_solve_BAC"
+	        android:layout_width="0dp"
+	        android:layout_height="60dp"
+	        android:scaleType="fitCenter"
+	        android:background="@null"
+	        android:src="@drawable/calculate"
+	        android:layout_weight="1"
+	        android:layout_margin="-1dp"
+	        android:onClick="solveBAC"/>
+	    <ImageButton
+	        android:adjustViewBounds = "true"
+	        android:id="@+id/button_settings"
+	        android:layout_width="0dp"
+	        android:layout_height="60dp"
+	        android:scaleType="fitCenter"
+	        android:background="@null"
+	        android:src="@drawable/settings"
+	        android:layout_weight="1"
+	        android:layout_margin="-1dp"
+	        android:onClick="displaySettings"/>
+	</LinearLayout>
+	<TextView 
+	    android:text="@string/list_of_drinks"
+	    android:paddingLeft="5dip"
+	    android:textSize="24dip"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"/>
+	<ListView
+	    android:id="@+id/list_drinks"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	</ListView>
+</LinearLayout>

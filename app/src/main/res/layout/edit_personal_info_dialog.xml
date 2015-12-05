@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TableRow
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip">
+        <TextView 
+            android:text="Gender:"
+            android:paddingTop="10dip"/>
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:text="Male"/>
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:text="Female"/>
+        </RadioGroup>
+    </TableRow>
+    <TableRow
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip">
+        <TextView
+            android:text="Weight"/>
+        <EditText
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:id="@+id/editTextWeight"
+            android:layout_weight="50" />
+    </TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip">
+        <TextView
+            android:text="Time since first drink\n(hours)"
+            android:layout_height="fill_parent"/>
+        <EditText
+            android:inputType="number|numberDecimal"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:id="@+id/editTextTime"
+            android:layout_height="wrap_content"
+            android:layout_weight="50" />
+    </TableRow>
+</TableLayout>

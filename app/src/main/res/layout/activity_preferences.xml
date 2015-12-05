@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beerpint" >
+
+    <TextView
+        android:id="@+id/preferences_textview_legallimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="9dp"
+        android:text="Legal BAC Limit"
+        android:textSize="24dp" />
+
+    <EditText
+        android:inputType="number|numberDecimal"
+        android:id="@+id/preferences_edittext_legallimit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/preferences_textview_legallimit"
+        android:textSize="24dp"
+        android:layout_marginRight="9dp" />
+
+    <Button
+        android:id="@+id/button_accept_preferences"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/preferences_textview_legallimit"
+        android:layout_below="@+id/preferences_textview_legallimit"
+        android:layout_marginTop="9dp"
+        android:text="Accept"
+        android:textSize="18dp"
+        android:onClick="updateSettings" />
+
+    <Button
+        android:id="@+id/button_cancel_preferences"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/preferences_edittext_legallimit"
+        android:layout_alignTop="@+id/button_accept_preferences"
+        android:text="Cancel"
+        android:textSize="18dp"
+        android:onClick="cancelSettings" />
+
+</RelativeLayout>
